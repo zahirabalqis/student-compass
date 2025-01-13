@@ -35,7 +35,7 @@ const AdminLogin = ({ onLogin }) => {
                 }
 
                 // Register request
-                const response = await axios.post('http://localhost:5003/api/admin/register', {
+                const response = await axios.post('`${import.meta.env.VITE_API_BASE_URL}/api/admin/register', {
                     username: formData.username,
                     password: formData.password,
                 });

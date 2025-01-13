@@ -21,7 +21,7 @@ function AdminRegister() {
         }
 
         try {
-            const res = await axios.post('http://localhost:5003/api/admin/register', {
+            const res = await axios.post('${import.meta.env.VITE_API_BASE_URL}/api/admin/register', {
                 username,
                 password,
             });

@@ -24,7 +24,7 @@ function UserPortal() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5003/api/buildings')
+      .get('${import.meta.env.VITE_API_BASE_URL}/api/buildings')
       .then((res) => {
         setBuildings(res.data);
       })
@@ -36,7 +36,7 @@ function UserPortal() {
   useEffect(() => {
     if (currentView === 'contacts') {
       axios
-        .get('http://localhost:5003/api/contacts')
+        .get('${import.meta.env.VITE_API_BASE_URL}/api/contacts')
         .then((res) => {
           setContacts(res.data);
         })
@@ -69,7 +69,7 @@ function UserPortal() {
     }
 
     axios
-      .get(`http://localhost:5003/api/rooms/${buildingId}`)
+      .get(`${import.meta.env.VITE_API_BASE_URL}/api/rooms/${buildingId}`)
       .then((res) => {
         setRoomsByBuilding((prevState) => ({
           ...prevState,

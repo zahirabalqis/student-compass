@@ -26,12 +26,12 @@ function AdminPortal() {
 
     const fetchData = async () => {
         try {
-            const buildingsRes = await axios.get('http://localhost:5003/api/buildings', {
+            const buildingsRes = await axios.get('${import.meta.env.VITE_API_BASE_URL}/api/buildings', {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setBuildings(buildingsRes.data);
 
-            const contactsRes = await axios.get('http://localhost:5003/api/contacts', {
+            const contactsRes = await axios.get('${import.meta.env.VITE_API_BASE_URL}/api/contacts', {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setContacts(contactsRes.data);
@@ -48,7 +48,7 @@ function AdminPortal() {
 
     const handleDeleteBuilding = async (id) => {
         try {
-            await axios.delete(`http://localhost:5003/api/buildings/${id}`, {
+            await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/buildings/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setBuildings(buildings.filter((building) => building.id !== id));
@@ -59,7 +59,7 @@ function AdminPortal() {
 
     const handleDeleteContact = async (id) => {
         try {
-            await axios.delete(`http://localhost:5003/api/contacts/${id}`, {
+            await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/contacts/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setContacts(contacts.filter((contact) => contact.id !== id));
@@ -71,7 +71,7 @@ function AdminPortal() {
     const handleUpdateBuilding = async () => {
         try {
             await axios.put(
-                `http://localhost:5003/api/buildings/${editBuilding.id}`,
+                `${import.meta.env.VITE_API_BASE_URL}/api/buildings/${editBuilding.id}`,
                 editBuilding,
                 {
                     headers: { Authorization: `Bearer ${token}` },
@@ -87,7 +87,7 @@ function AdminPortal() {
     const handleUpdateContact = async () => {
         try {
             await axios.put(
-                `http://localhost:5003/api/contacts/${editContact.id}`,
+                `${import.meta.env.VITE_API_BASE_URL}/api/contacts/${editContact.id}`,
                 editContact,
                 {
                     headers: { Authorization: `Bearer ${token}` },

@@ -8,7 +8,7 @@ const Feedback = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5003/api/feedback", {
+            const response = await axios.post("${import.meta.env.VITE_API_BASE_URL}/api/feedback", {
                 feedback,
             });
             setMessage(response.data.message);
