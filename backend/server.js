@@ -221,6 +221,6 @@ app.get('/', (req, res) => {
 });
 
 // Start Server
-app.listen(5003, () => {
-    console.log("Server running at http://localhost:5003");
+app.listen(PORT, '10.40.197.0', () => {
+    console.log("Server running at http://10.40.197.0:3000");
 });
