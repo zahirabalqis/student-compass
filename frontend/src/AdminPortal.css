@@ -1,0 +1,61 @@
+.admin-portal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.admin-portal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logout-button {
+    padding: 10px 15px;
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #ff1e3b;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0;
+}
+
+.data-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.data-list {
+    width: 45%;
+}
+
+.data-list h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.data-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.data-list li {
+    margin-bottom: 8px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,300 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7fbfd;
+  color: white;
+  background-image: url('./assets/bg3.jpg'); /* Path to your background image */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  overflow: auto; /* Ensure content is scrollable */
+  position: relative; /* Needed for the overlay effect */
+}
+
+h1, h2, h3, p, label {
+  color: white !important;
+}
+body::before {
+  content: ''; /* This pseudo-element will serve as an overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+  z-index: -1; /* Place it behind the content */
+}
+
+.not-found {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px !important;
+  border: 1px solid #030f1d;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.building-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.building-list li {
+  margin: 10px 0;
+}
+
+.building-list button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff !important;
+  color: rgb(46, 35, 119);
+  cursor: pointer;
+}
+
+.building-list button:hover {
+  background-color: #4489d8;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+nav {
+  padding: 10px;
+  background: #d1e6fb00;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #557ea8;
+}
+
+
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d1e6fbed;
+  color: rgb(4, 0, 0);
+  padding: 5px 2px; /* Adjust spacing inside the header */
+  display: flex;
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Space out the logo and navigation links */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(239, 234, 234, 0.1);
+}
+
+
+/* Logo */
+.header .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 30px; /* Add space from the screen edge */
+}
+
+/* Navigation Links in Header */
+.header nav {
+  display: flex;
+  margin-left: auto; /* Push navigation links to the right */
+  gap: 20px; /* Space between each link */
+}
+
+.header nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #007bff; /* Hover effect */
+}
+
+main {
+  flex: 1; /* Pastikan main boleh berkembang untuk kandungan */
+  padding: 20px;
+  overflow-y: auto; /* Kandungan boleh ditatal jika terlalu banyak */
+}
+
+footer {
+  position: relative; /* Or fixed if you want it always at the bottom */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Make the footer span the full width */
+  background-color: #feffff00; /* Background color */
+  color: rgb(16, 0, 0); /* Text color */
+  padding: 10px 0; /* Add some spacing */
+  text-align: center; /* Center-align the content */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 2px solid #ddd;
+  padding: 8px;
+  color: #333; /* Change this to your desired font color */
+}
+
+/* Example: If you want to style headers differently */
+table th {
+  color: #edeff2; /* Blue font color for table headers */
+}
+
+/* Example: If you want to style rows differently */
+table td {
+  color: #f6f5f5; /* Gray font color for table data */
+  font-size: 16px !important;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #030f1d;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+
+}
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-icon {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin-right: 1px; /* Space between the icon and edge */
+  font-size: 20px; /* Adjust icon size if needed */
+
+}
+
+.home-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black; /* Icon color */
+  font-size: 24px; /* Adjust size of the icon */
+  transition: transform 0.3s, color 0.3s; /* Smooth hover animation */
+}
+
+.home-icon a:hover {
+  color: #007bff; /* Hover color, change to your theme color */
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.facility-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.facility-card:hover {
+  transform: scale(1.05);
+}
+
+.facility-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.facility-card h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.facility-card p {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.slideshow img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
